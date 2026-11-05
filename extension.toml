@@ -1,10 +1,10 @@
-# TypeScript and TSX: highlighting from Tree-sitter grammars compiled to
-# WebAssembly, and typescript-language-server. No code. See
-# Flareite's docs/extensions.md#languages.
+# TypeScript and JavaScript (with TSX and JSX): highlighting from Tree-sitter
+# grammars compiled to WebAssembly, and typescript-language-server for all
+# four. No code. See Flareite's docs/extensions.md#languages.
 id = "flareite.typescript"
-name = "TypeScript"
-version = "0.1.0"
-description = "TypeScript and TSX highlighting, and typescript-language-server."
+name = "TypeScript & JavaScript"
+version = "0.2.0"
+description = "TypeScript, TSX, JavaScript, and JSX highlighting, and typescript-language-server."
 author = "Flareite"
 api_version = "1"
 
@@ -36,11 +36,21 @@ folds = "queries/tsx/folds.scm"
 line_comment = "//"
 block_comment = ["/*", "*/"]
 
-# `npm install -g typescript-language-server typescript`. The JavaScript
-# extension declares the same server for JavaScript; one runs for both.
+# JSX too: the JavaScript grammar parses it.
+[[languages]]
+id = "javascript"
+name = "JavaScript"
+file_extensions = ["js", "mjs", "cjs", "jsx"]
+grammar = "grammars/tree-sitter-javascript.wasm"
+highlights = "queries/javascript/highlights.scm"
+folds = "queries/javascript/folds.scm"
+line_comment = "//"
+block_comment = ["/*", "*/"]
+
+# `npm install -g typescript-language-server typescript`
 [[language_servers]]
 name = "typescript-language-server"
 command = "typescript-language-server"
 args = ["--stdio"]
-languages = ["typescript", "typescriptreact"]
+languages = ["typescript", "typescriptreact", "javascript"]
 root_markers = ["tsconfig.json", "jsconfig.json", "package.json"]
