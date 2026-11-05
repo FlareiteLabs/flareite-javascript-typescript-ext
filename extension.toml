@@ -1,15 +1,15 @@
 # JavaScript (with JSX): highlighting from a Tree-sitter grammar compiled to
 # WebAssembly, and typescript-language-server. No code. See
-# docs/extensions.md#languages.
-id = "ferrite.javascript"
+# Flareite's docs/extensions.md#languages.
+id = "flareite.javascript"
 name = "JavaScript"
 version = "0.1.0"
 description = "JavaScript and JSX highlighting, and typescript-language-server."
-author = "Ferrite"
+author = "Flareite"
 api_version = "1"
 
 [engines]
-ferrite = ">=0.1.0"
+flareite = ">=0.1.0"
 
 [permissions]
 language_servers = true
