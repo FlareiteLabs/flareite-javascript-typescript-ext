@@ -3,7 +3,7 @@
 # four. No code. See Flareite's docs/extensions.md#languages.
 id = "flareite.typescript"
 name = "TypeScript & JavaScript"
-version = "0.2.0"
+version = "0.3.0"
 description = "TypeScript, TSX, JavaScript, and JSX highlighting, and typescript-language-server."
 author = "Flareite"
 api_version = "1"
@@ -23,6 +23,67 @@ highlights = "queries/typescript/highlights.scm"
 folds = "queries/typescript/folds.scm"
 line_comment = "//"
 block_comment = ["/*", "*/"]
+# Brackets and quotes typed in pairs, as in VS Code's language configuration.
+brackets = [["${", "}"], ["{", "}"], ["[", "]"], ["(", ")"]]
+auto_closing_pairs = [
+  [
+    "{",
+    "}",
+  ],
+  [
+    "[",
+    "]",
+  ],
+  [
+    "(",
+    ")",
+  ],
+  { open = "'", close = "'", not_in = [
+    "string",
+    "comment",
+  ] },
+  { open = '"', close = '"', not_in = [
+    "string",
+  ] },
+  { open = "`", close = "`", not_in = [
+    "string",
+    "comment",
+  ] },
+  { open = "/**", close = " */", not_in = [
+    "string",
+  ] },
+]
+surrounding_pairs = [
+  [
+    "{",
+    "}",
+  ],
+  [
+    "[",
+    "]",
+  ],
+  [
+    "(",
+    ")",
+  ],
+  [
+    "'",
+    "'",
+  ],
+  [
+    '"',
+    '"',
+  ],
+  [
+    "`",
+    "`",
+  ],
+  [
+    "<",
+    ">",
+  ],
+]
+auto_close_before = ";:.,=}])>`"
 
 [[languages]]
 # The LSP id for TSX.
@@ -35,6 +96,67 @@ highlights = "queries/tsx/highlights.scm"
 folds = "queries/tsx/folds.scm"
 line_comment = "//"
 block_comment = ["/*", "*/"]
+# Brackets and quotes typed in pairs, as in VS Code's language configuration.
+brackets = [["${", "}"], ["{", "}"], ["[", "]"], ["(", ")"]]
+auto_closing_pairs = [
+  [
+    "{",
+    "}",
+  ],
+  [
+    "[",
+    "]",
+  ],
+  [
+    "(",
+    ")",
+  ],
+  { open = "'", close = "'", not_in = [
+    "string",
+    "comment",
+  ] },
+  { open = '"', close = '"', not_in = [
+    "string",
+  ] },
+  { open = "`", close = "`", not_in = [
+    "string",
+    "comment",
+  ] },
+  { open = "/**", close = " */", not_in = [
+    "string",
+  ] },
+]
+surrounding_pairs = [
+  [
+    "{",
+    "}",
+  ],
+  [
+    "[",
+    "]",
+  ],
+  [
+    "(",
+    ")",
+  ],
+  [
+    "'",
+    "'",
+  ],
+  [
+    '"',
+    '"',
+  ],
+  [
+    "`",
+    "`",
+  ],
+  [
+    "<",
+    ">",
+  ],
+]
+auto_close_before = ";:.,=}])>`"
 
 # JSX too: the JavaScript grammar parses it.
 [[languages]]
@@ -46,6 +168,67 @@ highlights = "queries/javascript/highlights.scm"
 folds = "queries/javascript/folds.scm"
 line_comment = "//"
 block_comment = ["/*", "*/"]
+# Brackets and quotes typed in pairs, as in VS Code's language configuration.
+brackets = [["${", "}"], ["{", "}"], ["[", "]"], ["(", ")"]]
+auto_closing_pairs = [
+  [
+    "{",
+    "}",
+  ],
+  [
+    "[",
+    "]",
+  ],
+  [
+    "(",
+    ")",
+  ],
+  { open = "'", close = "'", not_in = [
+    "string",
+    "comment",
+  ] },
+  { open = '"', close = '"', not_in = [
+    "string",
+  ] },
+  { open = "`", close = "`", not_in = [
+    "string",
+    "comment",
+  ] },
+  { open = "/**", close = " */", not_in = [
+    "string",
+  ] },
+]
+surrounding_pairs = [
+  [
+    "{",
+    "}",
+  ],
+  [
+    "[",
+    "]",
+  ],
+  [
+    "(",
+    ")",
+  ],
+  [
+    "'",
+    "'",
+  ],
+  [
+    '"',
+    '"',
+  ],
+  [
+    "`",
+    "`",
+  ],
+  [
+    "<",
+    ">",
+  ],
+]
+auto_close_before = ";:.,=}])>`"
 
 # `npm install -g typescript-language-server typescript`
 [[language_servers]]
